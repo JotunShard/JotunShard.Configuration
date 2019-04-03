@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JotunShard.Configuration", "src\JotunShard.Configuration.csproj", "{B5920AD2-E6A0-4F71-8BB1-EC8EB7E13BDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5A35D277-8EA3-4E83-A60A-2BC4F1591198}"
+	ProjectSection(SolutionItems) = preProject
+		.files\.editorconfig = .files\.editorconfig
+		.files\CodeMaid.config = .files\CodeMaid.config
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{BD71E2E4-551B-4A6F-983D-85E3D23F8985}"
+	ProjectSection(SolutionItems) = preProject
+		.github\.files\.github\CODE_OF_CONDUCT.md = .github\.files\.github\CODE_OF_CONDUCT.md
+		.github\.files\.github\CONTRIBUTING.md = .github\.files\.github\CONTRIBUTING.md
+		.github\.files\.github\ISSUE_TEMPLATE.md = .github\.files\.github\ISSUE_TEMPLATE.md
+		.github\.files\.github\PULL_REQUEST_TEMPLATE.md = .github\.files\.github\PULL_REQUEST_TEMPLATE.md
+		.github\.files\.github\SUPPORT.md = .github\.files\.github\SUPPORT.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pres", "pres", "{CBAD2D5A-4F38-49EF-8BF4-ECFFC30D7E61}"
+	ProjectSection(SolutionItems) = preProject
+		pres\docfx.json = pres\docfx.json
+		pres\index.md = pres\index.md
+		pres\toc.yml = pres\toc.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{0F136177-8765-490A-A0CF-484E9E601217}"
+	ProjectSection(SolutionItems) = preProject
+		pres\api\.manifest = pres\api\.manifest
+		pres\api\index.md = pres\api\index.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "articles", "articles", "{61E92933-DCA6-454D-A869-1C6D7D44905E}"
+	ProjectSection(SolutionItems) = preProject
+		pres\articles\intro.md = pres\articles\intro.md
+		pres\articles\toc.yml = pres\articles\toc.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5920AD2-E6A0-4F71-8BB1-EC8EB7E13BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5920AD2-E6A0-4F71-8BB1-EC8EB7E13BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5920AD2-E6A0-4F71-8BB1-EC8EB7E13BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5920AD2-E6A0-4F71-8BB1-EC8EB7E13BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0F136177-8765-490A-A0CF-484E9E601217} = {CBAD2D5A-4F38-49EF-8BF4-ECFFC30D7E61}
+		{61E92933-DCA6-454D-A869-1C6D7D44905E} = {CBAD2D5A-4F38-49EF-8BF4-ECFFC30D7E61}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B4887B3-6412-4462-BF50-7EB46A074BFB}
+	EndGlobalSection
+EndGlobal
