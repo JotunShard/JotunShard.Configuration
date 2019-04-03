@@ -21,7 +21,7 @@
   "JotunShard.Configuration.ConfigurationSectionDefinition.Settings": "JotunShard.Configuration.ConfigurationSectionDefinition.yml",
   "JotunShard.Configuration.ConfigurationSectionDefinition.SubSections": "JotunShard.Configuration.ConfigurationSectionDefinition.yml",
   "JotunShard.Configuration.Extensions": "JotunShard.Configuration.Extensions.yml",
-  "JotunShard.Configuration.Extensions.AddDefaultPipeline(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{JotunShard.Configuration.ServerConfigurationSource},System.Func{Microsoft.Extensions.Configuration.FileConfigurationSource},System.Action{Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource})": "JotunShard.Configuration.Extensions.yml",
+  "JotunShard.Configuration.Extensions.AddDefaultPipeline(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Func{JotunShard.Configuration.ServerConfigurationSource},System.Func{Microsoft.Extensions.Configuration.FileConfigurationSource},System.Action{Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource})": "JotunShard.Configuration.Extensions.yml",
   "JotunShard.Configuration.Extensions.AddIfNeeded``1(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{``0})": "JotunShard.Configuration.Extensions.yml",
   "JotunShard.Configuration.Extensions.AddIfNeeded``1(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Func{``0})": "JotunShard.Configuration.Extensions.yml",
   "JotunShard.Configuration.IConfigurationServer": "JotunShard.Configuration.IConfigurationServer.yml",

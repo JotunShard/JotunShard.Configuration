@@ -8,12 +8,12 @@ namespace JotunShard.Configuration
     {
         public static IConfigurationBuilder AddDefaultPipeline(
             this IConfigurationBuilder configurationBuilder,
-            Action<ServerConfigurationSource> configureServerSource = null,
+            Func<ServerConfigurationSource> provideServerSource = null,
             Func<FileConfigurationSource> provideFileSource = null,
             Action<CommandLineConfigurationSource> configureCommandLineSource = null)
             => configurationBuilder
                 .AddEnvironmentVariables()
-                .AddIfNeeded(configureServerSource)
+                .AddIfNeeded(provideServerSource)
                 .AddIfNeeded(provideFileSource)
                 .AddIfNeeded(configureCommandLineSource);
 

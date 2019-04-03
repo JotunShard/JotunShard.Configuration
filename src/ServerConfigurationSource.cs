@@ -2,9 +2,9 @@
 
 namespace JotunShard.Configuration
 {
-    public class ServerConfigurationSource : IConfigurationSource
+    public abstract class ServerConfigurationSource : IConfigurationSource
     {
-        public IConfigurationServerProvider ServerProvider { get; set; }
+        public abstract IConfigurationServerProvider ServerProvider { get; }
 
         public IConfigurationProvider Build(IConfigurationBuilder builder)
             => new ServerConfigurationProvider(ServerProvider, builder.Build());
