@@ -32,5 +32,17 @@ namespace JotunShard.Configuration
             => provide != null
                 ? configurationBuilder.Add(provide())
                 : configurationBuilder;
+
+#if NETSTANDARD1_3
+        public static IConfigurationBuilder Add<TSource>(
+            this IConfigurationBuilder builder,
+            Action<TSource> configureSource)
+            where TSource : IConfigurationSource, new()
+        {
+            var source = new TSource();
+            configureSource?.Invoke(source);
+            return builder.Add(source);
+        }
+#endif
     }
 }
