@@ -7,6 +7,6 @@ namespace JotunShard.Configuration
         public abstract IConfigurationServerProvider ServerProvider { get; }
 
         public IConfigurationProvider Build(IConfigurationBuilder builder)
-            => new ServerConfigurationProvider(ServerProvider, builder.Build());
+            => new ServerConfigurationProvider(ServerProvider.Create(builder.Build()));
     }
 }

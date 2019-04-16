@@ -10,11 +10,10 @@ namespace JotunShard.Configuration
         private readonly StringComparer _keyComparer;
 
         public ServerConfigurationProvider(
-            IConfigurationServerProvider serverProvider,
-            IConfigurationRoot configurationRoot,
+            IConfigurationServer server,
             StringComparer keyComparer = null)
         {
-            _server = serverProvider.Create(configurationRoot);
+            _server = server;
             _keyComparer = keyComparer ?? StringComparer.OrdinalIgnoreCase;
             Data = new Dictionary<string, string>(_keyComparer);
         }
