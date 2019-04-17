@@ -5,59 +5,11 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/JotunShard.Configuration.ConfigurationDefinition.Builder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/JotunShard.Configuration.ConfigurationDefinition.Builder.html",
-          "hash": "pGl2Gk21n5Q6c6uuDvqAHw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/JotunShard.Configuration.ConfigurationDefinition.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/JotunShard.Configuration.ConfigurationDefinition.html",
-          "hash": "q95gh7BhYINtl65hinAnyw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/JotunShard.Configuration.ConfigurationSectionDefinition.Builder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/JotunShard.Configuration.ConfigurationSectionDefinition.Builder.html",
-          "hash": "t/bMu8z0/tF3FeuBP4pXPw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/JotunShard.Configuration.ConfigurationSectionDefinition.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/JotunShard.Configuration.ConfigurationSectionDefinition.html",
-          "hash": "8OvCU0wx1ZD02IXjilowtg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/JotunShard.Configuration.Extensions.yml",
       "output": {
         ".html": {
           "relative_path": "api/JotunShard.Configuration.Extensions.html",
-          "hash": "We99vX63DVdaOnhZ368kXQ=="
+          "hash": "NVj/t62erttvOerGX/7VGA=="
         }
       },
       "is_incremental": false,
@@ -93,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JotunShard.Configuration.ServerConfigurationProvider.html",
-          "hash": "A9rCpdW1Pu6f5DlFZXS2qw=="
+          "hash": "K3toBQHsXpv2n03IlOxe3g=="
         }
       },
       "is_incremental": false,
@@ -117,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JotunShard.Configuration.html",
-          "hash": "K8jPPCvfyp4E5jFfBTlrOw=="
+          "hash": "k7hQP8j0L53TOymUT/L1JA=="
         }
       },
       "is_incremental": false,
@@ -141,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ypvGjoM91AgHqmZp1lqUSg=="
+          "hash": "22v+bNHNC4n2JZ7clvBKoA=="
         }
       },
       "is_incremental": false,
@@ -217,7 +169,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 10,
+          "total_file_count": 6,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
