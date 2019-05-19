@@ -1,0 +1,17 @@
+{
+  "JotunShard.Configuration": "JotunShard.Configuration.yml",
+  "JotunShard.Configuration.Extensions": "JotunShard.Configuration.Extensions.yml",
+  "JotunShard.Configuration.Extensions.AddDefaultPipeline(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Func{JotunShard.Configuration.ServerConfigurationSource},System.Func{Microsoft.Extensions.Configuration.FileConfigurationSource},System.Action{Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource})": "JotunShard.Configuration.Extensions.yml",
+  "JotunShard.Configuration.Extensions.AddIfNeeded``1(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{``0})": "JotunShard.Configuration.Extensions.yml",
+  "JotunShard.Configuration.Extensions.AddIfNeeded``1(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Func{``0})": "JotunShard.Configuration.Extensions.yml",
+  "JotunShard.Configuration.IConfigurationServer": "JotunShard.Configuration.IConfigurationServer.yml",
+  "JotunShard.Configuration.IConfigurationServer.QuerySettings": "JotunShard.Configuration.IConfigurationServer.yml",
+  "JotunShard.Configuration.IConfigurationServerProvider": "JotunShard.Configuration.IConfigurationServerProvider.yml",
+  "JotunShard.Configuration.IConfigurationServerProvider.Create(Microsoft.Extensions.Configuration.IConfiguration)": "JotunShard.Configuration.IConfigurationServerProvider.yml",
+  "JotunShard.Configuration.ServerConfigurationProvider": "JotunShard.Configuration.ServerConfigurationProvider.yml",
+  "JotunShard.Configuration.ServerConfigurationProvider.#ctor(JotunShard.Configuration.IConfigurationServer,System.StringComparer)": "JotunShard.Configuration.ServerConfigurationProvider.yml",
+  "JotunShard.Configuration.ServerConfigurationProvider.Load": "JotunShard.Configuration.ServerConfigurationProvider.yml",
+  "JotunShard.Configuration.ServerConfigurationSource": "JotunShard.Configuration.ServerConfigurationSource.yml",
+  "JotunShard.Configuration.ServerConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)": "JotunShard.Configuration.ServerConfigurationSource.yml",
+  "JotunShard.Configuration.ServerConfigurationSource.ServerProvider": "JotunShard.Configuration.ServerConfigurationSource.yml"
+}

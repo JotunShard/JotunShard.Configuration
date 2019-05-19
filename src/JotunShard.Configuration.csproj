@@ -4,7 +4,14 @@
     <TargetFrameworks>netstandard1.3;netstandard2.0</TargetFrameworks>
     <DocfxConfigFile>..\pres\docfx.json</DocfxConfigFile>
     <OutputFolder>..\pres</OutputFolder>
-    <LogFile>..\pres\log.txt</LogFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
+    <LogFile>..\pres\log-netstandard1.3.txt</LogFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <LogFile>..\pres\log-netstandard2.0.txt</LogFile>
   </PropertyGroup>
 
   <ItemGroup>

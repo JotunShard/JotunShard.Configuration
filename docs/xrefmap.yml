@@ -3,26 +3,26 @@ sorted: true
 references:
 - uid: JotunShard.Configuration
   name: JotunShard.Configuration
-  href: api/JotunShard.Configuration.html
+  href: api/netstandard2.0/JotunShard.Configuration.yml
   commentId: N:JotunShard.Configuration
   fullName: JotunShard.Configuration
   nameWithType: JotunShard.Configuration
 - uid: JotunShard.Configuration.Extensions
   name: Extensions
-  href: api/JotunShard.Configuration.Extensions.html
+  href: api/netstandard2.0/JotunShard.Configuration.Extensions.yml
   commentId: T:JotunShard.Configuration.Extensions
   fullName: JotunShard.Configuration.Extensions
   nameWithType: Extensions
 - uid: JotunShard.Configuration.Extensions.Add*
   name: Add
-  href: api/JotunShard.Configuration.Extensions.html#JotunShard_Configuration_Extensions_Add_
+  href: api/netstandard1.3/JotunShard.Configuration.Extensions.yml
   commentId: Overload:JotunShard.Configuration.Extensions.Add
   isSpec: "True"
   fullName: JotunShard.Configuration.Extensions.Add
   nameWithType: Extensions.Add
 - uid: JotunShard.Configuration.Extensions.Add``1(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{``0})
   name: Add<TSource>(IConfigurationBuilder, Action<TSource>)
-  href: api/JotunShard.Configuration.Extensions.html#JotunShard_Configuration_Extensions_Add__1_Microsoft_Extensions_Configuration_IConfigurationBuilder_System_Action___0__
+  href: api/netstandard1.3/JotunShard.Configuration.Extensions.yml
   commentId: M:JotunShard.Configuration.Extensions.Add``1(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{``0})
   name.vb: Add(Of TSource)(IConfigurationBuilder, Action(Of TSource))
   fullName: JotunShard.Configuration.Extensions.Add<TSource>(Microsoft.Extensions.Configuration.IConfigurationBuilder, System.Action<TSource>)
@@ -31,7 +31,7 @@ references:
   nameWithType.vb: Extensions.Add(Of TSource)(IConfigurationBuilder, Action(Of TSource))
 - uid: JotunShard.Configuration.Extensions.AddDefaultPipeline(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Func{JotunShard.Configuration.ServerConfigurationSource},System.Func{Microsoft.Extensions.Configuration.FileConfigurationSource},System.Action{Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource})
   name: AddDefaultPipeline(IConfigurationBuilder, Func<ServerConfigurationSource>, Func<FileConfigurationSource>, Action<CommandLineConfigurationSource>)
-  href: api/JotunShard.Configuration.Extensions.html#JotunShard_Configuration_Extensions_AddDefaultPipeline_Microsoft_Extensions_Configuration_IConfigurationBuilder_System_Func_JotunShard_Configuration_ServerConfigurationSource__System_Func_Microsoft_Extensions_Configuration_FileConfigurationSource__System_Action_Microsoft_Extensions_Configuration_CommandLine_CommandLineConfigurationSource__
+  href: api/netstandard2.0/JotunShard.Configuration.Extensions.yml
   commentId: M:JotunShard.Configuration.Extensions.AddDefaultPipeline(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Func{JotunShard.Configuration.ServerConfigurationSource},System.Func{Microsoft.Extensions.Configuration.FileConfigurationSource},System.Action{Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource})
   name.vb: AddDefaultPipeline(IConfigurationBuilder, Func(Of ServerConfigurationSource), Func(Of FileConfigurationSource), Action(Of CommandLineConfigurationSource))
   fullName: JotunShard.Configuration.Extensions.AddDefaultPipeline(Microsoft.Extensions.Configuration.IConfigurationBuilder, System.Func<JotunShard.Configuration.ServerConfigurationSource>, System.Func<Microsoft.Extensions.Configuration.FileConfigurationSource>, System.Action<Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource>)
@@ -40,21 +40,21 @@ references:
   nameWithType.vb: Extensions.AddDefaultPipeline(IConfigurationBuilder, Func(Of ServerConfigurationSource), Func(Of FileConfigurationSource), Action(Of CommandLineConfigurationSource))
 - uid: JotunShard.Configuration.Extensions.AddDefaultPipeline*
   name: AddDefaultPipeline
-  href: api/JotunShard.Configuration.Extensions.html#JotunShard_Configuration_Extensions_AddDefaultPipeline_
+  href: api/netstandard2.0/JotunShard.Configuration.Extensions.yml
   commentId: Overload:JotunShard.Configuration.Extensions.AddDefaultPipeline
   isSpec: "True"
   fullName: JotunShard.Configuration.Extensions.AddDefaultPipeline
   nameWithType: Extensions.AddDefaultPipeline
 - uid: JotunShard.Configuration.Extensions.AddIfNeeded*
   name: AddIfNeeded
-  href: api/JotunShard.Configuration.Extensions.html#JotunShard_Configuration_Extensions_AddIfNeeded_
+  href: api/netstandard2.0/JotunShard.Configuration.Extensions.yml
   commentId: Overload:JotunShard.Configuration.Extensions.AddIfNeeded
   isSpec: "True"
   fullName: JotunShard.Configuration.Extensions.AddIfNeeded
   nameWithType: Extensions.AddIfNeeded
 - uid: JotunShard.Configuration.Extensions.AddIfNeeded``1(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{``0})
   name: AddIfNeeded<TConfigurationSource>(IConfigurationBuilder, Action<TConfigurationSource>)
-  href: api/JotunShard.Configuration.Extensions.html#JotunShard_Configuration_Extensions_AddIfNeeded__1_Microsoft_Extensions_Configuration_IConfigurationBuilder_System_Action___0__
+  href: api/netstandard2.0/JotunShard.Configuration.Extensions.yml
   commentId: M:JotunShard.Configuration.Extensions.AddIfNeeded``1(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{``0})
   name.vb: AddIfNeeded(Of TConfigurationSource)(IConfigurationBuilder, Action(Of TConfigurationSource))
   fullName: JotunShard.Configuration.Extensions.AddIfNeeded<TConfigurationSource>(Microsoft.Extensions.Configuration.IConfigurationBuilder, System.Action<TConfigurationSource>)
@@ -63,7 +63,7 @@ references:
   nameWithType.vb: Extensions.AddIfNeeded(Of TConfigurationSource)(IConfigurationBuilder, Action(Of TConfigurationSource))
 - uid: JotunShard.Configuration.Extensions.AddIfNeeded``1(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Func{``0})
   name: AddIfNeeded<TConfigurationSource>(IConfigurationBuilder, Func<TConfigurationSource>)
-  href: api/JotunShard.Configuration.Extensions.html#JotunShard_Configuration_Extensions_AddIfNeeded__1_Microsoft_Extensions_Configuration_IConfigurationBuilder_System_Func___0__
+  href: api/netstandard2.0/JotunShard.Configuration.Extensions.yml
   commentId: M:JotunShard.Configuration.Extensions.AddIfNeeded``1(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Func{``0})
   name.vb: AddIfNeeded(Of TConfigurationSource)(IConfigurationBuilder, Func(Of TConfigurationSource))
   fullName: JotunShard.Configuration.Extensions.AddIfNeeded<TConfigurationSource>(Microsoft.Extensions.Configuration.IConfigurationBuilder, System.Func<TConfigurationSource>)
@@ -72,102 +72,102 @@ references:
   nameWithType.vb: Extensions.AddIfNeeded(Of TConfigurationSource)(IConfigurationBuilder, Func(Of TConfigurationSource))
 - uid: JotunShard.Configuration.IConfigurationServer
   name: IConfigurationServer
-  href: api/JotunShard.Configuration.IConfigurationServer.html
+  href: api/netstandard1.3/JotunShard.Configuration.IConfigurationServer.yml
   commentId: T:JotunShard.Configuration.IConfigurationServer
   fullName: JotunShard.Configuration.IConfigurationServer
   nameWithType: IConfigurationServer
 - uid: JotunShard.Configuration.IConfigurationServer.QuerySettings
   name: QuerySettings()
-  href: api/JotunShard.Configuration.IConfigurationServer.html#JotunShard_Configuration_IConfigurationServer_QuerySettings
+  href: api/netstandard1.3/JotunShard.Configuration.IConfigurationServer.yml
   commentId: M:JotunShard.Configuration.IConfigurationServer.QuerySettings
   fullName: JotunShard.Configuration.IConfigurationServer.QuerySettings()
   nameWithType: IConfigurationServer.QuerySettings()
 - uid: JotunShard.Configuration.IConfigurationServer.QuerySettings*
   name: QuerySettings
-  href: api/JotunShard.Configuration.IConfigurationServer.html#JotunShard_Configuration_IConfigurationServer_QuerySettings_
+  href: api/netstandard1.3/JotunShard.Configuration.IConfigurationServer.yml
   commentId: Overload:JotunShard.Configuration.IConfigurationServer.QuerySettings
   isSpec: "True"
   fullName: JotunShard.Configuration.IConfigurationServer.QuerySettings
   nameWithType: IConfigurationServer.QuerySettings
 - uid: JotunShard.Configuration.IConfigurationServerProvider
   name: IConfigurationServerProvider
-  href: api/JotunShard.Configuration.IConfigurationServerProvider.html
+  href: api/netstandard2.0/JotunShard.Configuration.IConfigurationServerProvider.yml
   commentId: T:JotunShard.Configuration.IConfigurationServerProvider
   fullName: JotunShard.Configuration.IConfigurationServerProvider
   nameWithType: IConfigurationServerProvider
 - uid: JotunShard.Configuration.IConfigurationServerProvider.Create(Microsoft.Extensions.Configuration.IConfiguration)
   name: Create(IConfiguration)
-  href: api/JotunShard.Configuration.IConfigurationServerProvider.html#JotunShard_Configuration_IConfigurationServerProvider_Create_Microsoft_Extensions_Configuration_IConfiguration_
+  href: api/netstandard2.0/JotunShard.Configuration.IConfigurationServerProvider.yml
   commentId: M:JotunShard.Configuration.IConfigurationServerProvider.Create(Microsoft.Extensions.Configuration.IConfiguration)
   fullName: JotunShard.Configuration.IConfigurationServerProvider.Create(Microsoft.Extensions.Configuration.IConfiguration)
   nameWithType: IConfigurationServerProvider.Create(IConfiguration)
 - uid: JotunShard.Configuration.IConfigurationServerProvider.Create*
   name: Create
-  href: api/JotunShard.Configuration.IConfigurationServerProvider.html#JotunShard_Configuration_IConfigurationServerProvider_Create_
+  href: api/netstandard2.0/JotunShard.Configuration.IConfigurationServerProvider.yml
   commentId: Overload:JotunShard.Configuration.IConfigurationServerProvider.Create
   isSpec: "True"
   fullName: JotunShard.Configuration.IConfigurationServerProvider.Create
   nameWithType: IConfigurationServerProvider.Create
 - uid: JotunShard.Configuration.ServerConfigurationProvider
   name: ServerConfigurationProvider
-  href: api/JotunShard.Configuration.ServerConfigurationProvider.html
+  href: api/netstandard1.3/JotunShard.Configuration.ServerConfigurationProvider.yml
   commentId: T:JotunShard.Configuration.ServerConfigurationProvider
   fullName: JotunShard.Configuration.ServerConfigurationProvider
   nameWithType: ServerConfigurationProvider
 - uid: JotunShard.Configuration.ServerConfigurationProvider.#ctor(JotunShard.Configuration.IConfigurationServer,System.StringComparer)
   name: ServerConfigurationProvider(IConfigurationServer, StringComparer)
-  href: api/JotunShard.Configuration.ServerConfigurationProvider.html#JotunShard_Configuration_ServerConfigurationProvider__ctor_JotunShard_Configuration_IConfigurationServer_System_StringComparer_
+  href: api/netstandard1.3/JotunShard.Configuration.ServerConfigurationProvider.yml
   commentId: M:JotunShard.Configuration.ServerConfigurationProvider.#ctor(JotunShard.Configuration.IConfigurationServer,System.StringComparer)
   fullName: JotunShard.Configuration.ServerConfigurationProvider.ServerConfigurationProvider(JotunShard.Configuration.IConfigurationServer, System.StringComparer)
   nameWithType: ServerConfigurationProvider.ServerConfigurationProvider(IConfigurationServer, StringComparer)
 - uid: JotunShard.Configuration.ServerConfigurationProvider.#ctor*
   name: ServerConfigurationProvider
-  href: api/JotunShard.Configuration.ServerConfigurationProvider.html#JotunShard_Configuration_ServerConfigurationProvider__ctor_
+  href: api/netstandard1.3/JotunShard.Configuration.ServerConfigurationProvider.yml
   commentId: Overload:JotunShard.Configuration.ServerConfigurationProvider.#ctor
   isSpec: "True"
   fullName: JotunShard.Configuration.ServerConfigurationProvider.ServerConfigurationProvider
   nameWithType: ServerConfigurationProvider.ServerConfigurationProvider
 - uid: JotunShard.Configuration.ServerConfigurationProvider.Load
   name: Load()
-  href: api/JotunShard.Configuration.ServerConfigurationProvider.html#JotunShard_Configuration_ServerConfigurationProvider_Load
+  href: api/netstandard1.3/JotunShard.Configuration.ServerConfigurationProvider.yml
   commentId: M:JotunShard.Configuration.ServerConfigurationProvider.Load
   fullName: JotunShard.Configuration.ServerConfigurationProvider.Load()
   nameWithType: ServerConfigurationProvider.Load()
 - uid: JotunShard.Configuration.ServerConfigurationProvider.Load*
   name: Load
-  href: api/JotunShard.Configuration.ServerConfigurationProvider.html#JotunShard_Configuration_ServerConfigurationProvider_Load_
+  href: api/netstandard1.3/JotunShard.Configuration.ServerConfigurationProvider.yml
   commentId: Overload:JotunShard.Configuration.ServerConfigurationProvider.Load
   isSpec: "True"
   fullName: JotunShard.Configuration.ServerConfigurationProvider.Load
   nameWithType: ServerConfigurationProvider.Load
 - uid: JotunShard.Configuration.ServerConfigurationSource
   name: ServerConfigurationSource
-  href: api/JotunShard.Configuration.ServerConfigurationSource.html
+  href: api/netstandard1.3/JotunShard.Configuration.ServerConfigurationSource.yml
   commentId: T:JotunShard.Configuration.ServerConfigurationSource
   fullName: JotunShard.Configuration.ServerConfigurationSource
   nameWithType: ServerConfigurationSource
 - uid: JotunShard.Configuration.ServerConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)
   name: Build(IConfigurationBuilder)
-  href: api/JotunShard.Configuration.ServerConfigurationSource.html#JotunShard_Configuration_ServerConfigurationSource_Build_Microsoft_Extensions_Configuration_IConfigurationBuilder_
+  href: api/netstandard1.3/JotunShard.Configuration.ServerConfigurationSource.yml
   commentId: M:JotunShard.Configuration.ServerConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)
   fullName: JotunShard.Configuration.ServerConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)
   nameWithType: ServerConfigurationSource.Build(IConfigurationBuilder)
 - uid: JotunShard.Configuration.ServerConfigurationSource.Build*
   name: Build
-  href: api/JotunShard.Configuration.ServerConfigurationSource.html#JotunShard_Configuration_ServerConfigurationSource_Build_
+  href: api/netstandard1.3/JotunShard.Configuration.ServerConfigurationSource.yml
   commentId: Overload:JotunShard.Configuration.ServerConfigurationSource.Build
   isSpec: "True"
   fullName: JotunShard.Configuration.ServerConfigurationSource.Build
   nameWithType: ServerConfigurationSource.Build
 - uid: JotunShard.Configuration.ServerConfigurationSource.ServerProvider
   name: ServerProvider
-  href: api/JotunShard.Configuration.ServerConfigurationSource.html#JotunShard_Configuration_ServerConfigurationSource_ServerProvider
+  href: api/netstandard1.3/JotunShard.Configuration.ServerConfigurationSource.yml
   commentId: P:JotunShard.Configuration.ServerConfigurationSource.ServerProvider
   fullName: JotunShard.Configuration.ServerConfigurationSource.ServerProvider
   nameWithType: ServerConfigurationSource.ServerProvider
 - uid: JotunShard.Configuration.ServerConfigurationSource.ServerProvider*
   name: ServerProvider
-  href: api/JotunShard.Configuration.ServerConfigurationSource.html#JotunShard_Configuration_ServerConfigurationSource_ServerProvider_
+  href: api/netstandard1.3/JotunShard.Configuration.ServerConfigurationSource.yml
   commentId: Overload:JotunShard.Configuration.ServerConfigurationSource.ServerProvider
   isSpec: "True"
   fullName: JotunShard.Configuration.ServerConfigurationSource.ServerProvider
