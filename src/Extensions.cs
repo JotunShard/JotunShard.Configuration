@@ -6,6 +6,8 @@ namespace JotunShard.Configuration
 {
     public static class Extensions
     {
+#if NETSTANDARD1_3
+
         public static IConfigurationBuilder AddDefaultPipeline<TServerConfigurationSource, TFileConfigurationSource>(
             this IConfigurationBuilder configurationBuilder,
             Action<TServerConfigurationSource> provideServerSource = null,
@@ -19,8 +21,6 @@ namespace JotunShard.Configuration
                 .Add(provideFileSource)
                 .Add(configureCommandLineSource);
 
-#if NETSTANDARD1_3
-
         public static IConfigurationBuilder Add<TSource>(
             this IConfigurationBuilder builder,
             Action<TSource> configureSource)
@@ -30,6 +30,25 @@ namespace JotunShard.Configuration
             configureSource?.Invoke(source);
             return builder.Add(source);
         }
+
+#endif
+
+#if NETSTANDARD2_0
+
+        public static IConfigurationBuilder AddDefaultPipeline<TServerConfigurationSource, TFileConfigurationSource>(
+            this IConfigurationBuilder configurationBuilder,
+            Action<TServerConfigurationSource> provideServerSource = null,
+            Action<TFileConfigurationSource> provideFileSource = null)
+            where TServerConfigurationSource : ServerConfigurationSource, new()
+            where TFileConfigurationSource : FileConfigurationSource, new()
+            => configurationBuilder
+                .AddEnvironmentVariables()
+                .Add(provideServerSource)
+                .Add(provideFileSource)
+                .Add<CommandLineConfigurationSource>(cmdSource =>
+                {
+                    cmdSource.Args = Environment.GetCommandLineArgs();
+                });
 
 #endif
     }
