@@ -6,34 +6,21 @@ namespace JotunShard.Configuration
 {
     public static class Extensions
     {
-        public static IConfigurationBuilder AddDefaultPipeline(
+        public static IConfigurationBuilder AddDefaultPipeline<TServerConfigurationSource, TFileConfigurationSource>(
             this IConfigurationBuilder configurationBuilder,
-            Func<ServerConfigurationSource> provideServerSource = null,
-            Func<FileConfigurationSource> provideFileSource = null,
+            Action<TServerConfigurationSource> provideServerSource = null,
+            Action<TFileConfigurationSource> provideFileSource = null,
             Action<CommandLineConfigurationSource> configureCommandLineSource = null)
+            where TServerConfigurationSource : ServerConfigurationSource, new()
+            where TFileConfigurationSource : FileConfigurationSource, new()
             => configurationBuilder
                 .AddEnvironmentVariables()
-                .AddIfNeeded(provideServerSource)
-                .AddIfNeeded(provideFileSource)
-                .AddIfNeeded(configureCommandLineSource);
-
-        public static IConfigurationBuilder AddIfNeeded<TConfigurationSource>(
-            this IConfigurationBuilder configurationBuilder,
-            Action<TConfigurationSource> configure)
-            where TConfigurationSource : IConfigurationSource, new()
-            => configure != null
-                ? configurationBuilder.Add(configure)
-                : configurationBuilder;
-
-        public static IConfigurationBuilder AddIfNeeded<TConfigurationSource>(
-            this IConfigurationBuilder configurationBuilder,
-            Func<TConfigurationSource> provide)
-            where TConfigurationSource : IConfigurationSource
-            => provide != null
-                ? configurationBuilder.Add(provide())
-                : configurationBuilder;
+                .Add(provideServerSource)
+                .Add(provideFileSource)
+                .Add(configureCommandLineSource);
 
 #if NETSTANDARD1_3
+
         public static IConfigurationBuilder Add<TSource>(
             this IConfigurationBuilder builder,
             Action<TSource> configureSource)
@@ -43,6 +30,7 @@ namespace JotunShard.Configuration
             configureSource?.Invoke(source);
             return builder.Add(source);
         }
+
 #endif
     }
 }
