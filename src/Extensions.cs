@@ -8,17 +8,44 @@ namespace JotunShard.Configuration
     {
 #if NETSTANDARD1_3
 
-        public static IConfigurationBuilder AddDefaultPipeline<TServerConfigurationSource, TFileConfigurationSource>(
-            this IConfigurationBuilder configurationBuilder,
-            Action<TServerConfigurationSource> provideServerSource = null,
-            Action<TFileConfigurationSource> provideFileSource = null,
-            Action<CommandLineConfigurationSource> configureCommandLineSource = null)
+        public static IConfigurationBuilder AddFullPipeline<TServerConfigurationSource, TFileConfigurationSource>(
+            this IConfigurationBuilder configurationBuilder,//AppDomain
+            Action<TServerConfigurationSource> provideServerSource,
+            Action<TFileConfigurationSource> provideFileSource,
+            Action<CommandLineConfigurationSource> configureCommandLineSource)
             where TServerConfigurationSource : ServerConfigurationSource, new()
             where TFileConfigurationSource : FileConfigurationSource, new()
             => configurationBuilder
                 .AddEnvironmentVariables()
                 .Add(provideServerSource)
                 .Add(provideFileSource)
+                .Add(configureCommandLineSource);
+
+        public static IConfigurationBuilder AddNetworkPipeline<TServerConfigurationSource>(
+            this IConfigurationBuilder configurationBuilder,
+            Action<TServerConfigurationSource> provideServerSource,
+            Action<CommandLineConfigurationSource> configureCommandLineSource)
+            where TServerConfigurationSource : ServerConfigurationSource, new()
+            => configurationBuilder
+                .AddEnvironmentVariables()
+                .Add(provideServerSource)
+                .Add(configureCommandLineSource);
+
+        public static IConfigurationBuilder AddAgentPipeline<TFileConfigurationSource>(
+            this IConfigurationBuilder configurationBuilder,
+            Action<TFileConfigurationSource> provideFileSource,
+            Action<CommandLineConfigurationSource> configureCommandLineSource)
+            where TFileConfigurationSource : FileConfigurationSource, new()
+            => configurationBuilder
+                .AddEnvironmentVariables()
+                .Add(provideFileSource)
+                .Add(configureCommandLineSource);
+
+        public static IConfigurationBuilder AddUtilityPipeline(
+            this IConfigurationBuilder configurationBuilder,
+            Action<CommandLineConfigurationSource> configureCommandLineSource)
+            => configurationBuilder
+                .AddEnvironmentVariables()
                 .Add(configureCommandLineSource);
 
         public static IConfigurationBuilder Add<TSource>(
@@ -35,16 +62,49 @@ namespace JotunShard.Configuration
 
 #if NETSTANDARD2_0
 
-        public static IConfigurationBuilder AddDefaultPipeline<TServerConfigurationSource, TFileConfigurationSource>(
+        public static IConfigurationBuilder AddFullPipeline<TServerConfigurationSource, TFileConfigurationSource>(
             this IConfigurationBuilder configurationBuilder,
-            Action<TServerConfigurationSource> provideServerSource = null,
-            Action<TFileConfigurationSource> provideFileSource = null)
+            Action<TServerConfigurationSource> provideServerSource,
+            Action<TFileConfigurationSource> provideFileSource)
             where TServerConfigurationSource : ServerConfigurationSource, new()
             where TFileConfigurationSource : FileConfigurationSource, new()
             => configurationBuilder
                 .AddEnvironmentVariables()
                 .Add(provideServerSource)
                 .Add(provideFileSource)
+                .Add<CommandLineConfigurationSource>(cmdSource =>
+                {
+                    cmdSource.Args = Environment.GetCommandLineArgs();
+                });
+
+        public static IConfigurationBuilder AddNetworkPipeline<TServerConfigurationSource, TFileConfigurationSource>(
+            this IConfigurationBuilder configurationBuilder,
+            Action<TServerConfigurationSource> provideServerSource)
+            where TServerConfigurationSource : ServerConfigurationSource, new()
+            => configurationBuilder
+                .AddEnvironmentVariables()
+                .Add(provideServerSource)
+                .Add<CommandLineConfigurationSource>(cmdSource =>
+                {
+                    cmdSource.Args = Environment.GetCommandLineArgs();
+                });
+
+        public static IConfigurationBuilder AddAgentPipeline<TServerConfigurationSource, TFileConfigurationSource>(
+            this IConfigurationBuilder configurationBuilder,
+            Action<TFileConfigurationSource> provideFileSource)
+            where TFileConfigurationSource : FileConfigurationSource, new()
+            => configurationBuilder
+                .AddEnvironmentVariables()
+                .Add(provideFileSource)
+                .Add<CommandLineConfigurationSource>(cmdSource =>
+                {
+                    cmdSource.Args = Environment.GetCommandLineArgs();
+                });
+
+        public static IConfigurationBuilder AddUtilityPipeline<TServerConfigurationSource, TFileConfigurationSource>(
+            this IConfigurationBuilder configurationBuilder)
+            => configurationBuilder
+                .AddEnvironmentVariables()
                 .Add<CommandLineConfigurationSource>(cmdSource =>
                 {
                     cmdSource.Args = Environment.GetCommandLineArgs();
