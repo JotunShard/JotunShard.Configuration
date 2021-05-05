@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.3;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <DocfxConfigFile>..\pres\docfx.json</DocfxConfigFile>
     <OutputFolder>..\pres</OutputFolder>
     <LogFile>..\pres\log.txt</LogFile>
@@ -19,16 +18,9 @@
     <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
-        <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="1.1.2" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="1.1.2" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="1.1.2" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
   </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-        <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="2.2.0" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
-  </ItemGroup>
-
 </Project>
