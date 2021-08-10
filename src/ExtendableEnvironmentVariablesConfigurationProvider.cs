@@ -24,15 +24,20 @@ namespace JotunShard.Configuration
         public override void Load() => Data = Environment.GetEnvironmentVariables()
             .Cast<DictionaryEntry>()
             .SelectMany(ConvertToAppSetting)
-            .Where(appEntry => ((string)appEntry.Key).StartsWith(_prefix))
             .ToDictionary(
                 appEntry => ((string)appEntry.Key).Substring(_prefix.Length),
                 appEntry => (string)appEntry.Value,
                 StringComparer.OrdinalIgnoreCase);
 
         private IEnumerable<DictionaryEntry> ConvertToAppSetting(DictionaryEntry entry)
-            => _translators
-                .DefaultIfEmpty(DefaultEnvironmentSettingTranslator.Default)
+        {
+            var key = (string)entry.Key;
+            if (key.StartsWith(_prefix))
+            {
+                return new[] { entry };
+            }
+            return _translators.Where(configurator => configurator.AcceptsKey(key))
                 .SelectMany(configurator => configurator.Translate(entry));
+        }
     }
 }
