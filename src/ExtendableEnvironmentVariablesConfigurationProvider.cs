@@ -25,7 +25,7 @@ namespace JotunShard.Configuration
             .Cast<DictionaryEntry>()
             .SelectMany(ConvertToAppSetting)
             .ToDictionary(
-                appEntry => ((string)appEntry.Key).Substring(_prefix.Length),
+                appEntry => (string)appEntry.Key,
                 appEntry => (string)appEntry.Value,
                 StringComparer.OrdinalIgnoreCase);
 
@@ -34,7 +34,10 @@ namespace JotunShard.Configuration
             var key = (string)entry.Key;
             if (key.StartsWith(_prefix))
             {
-                return new[] { entry };
+                return new[]
+                {
+                    new DictionaryEntry(key.Substring(_prefix.Length), entry.Value)
+                };
             }
             return _translators.Where(configurator => configurator.AcceptsKey(key))
                 .SelectMany(configurator => configurator.Translate(entry));
