@@ -10,6 +10,7 @@ namespace JotunShard.Configuration
             this IConfigurationBuilder configurationBuilder,//AppDomain
             Action<TServerConfigurationSource> provideServerSource,
             Action<TFileConfigurationSource> provideFileSource,
+            Action<CommandLineConfigurationSource> configureCommandLineSource,
             Func<ExtendableEnvironmentVariablesConfigurationSource> provideEnvironmentSource = null)
             where TServerConfigurationSource : ServerConfigurationSource, new()
             where TFileConfigurationSource : FileConfigurationSource, new()
@@ -22,6 +23,7 @@ namespace JotunShard.Configuration
         public static IConfigurationBuilder AddNetworkPipeline<TServerConfigurationSource>(
             this IConfigurationBuilder configurationBuilder,
             Action<TServerConfigurationSource> provideServerSource,
+            Action<CommandLineConfigurationSource> configureCommandLineSource,
             Func<ExtendableEnvironmentVariablesConfigurationSource> provideEnvironmentSource = null)
             where TServerConfigurationSource : ServerConfigurationSource, new()
             => configurationBuilder
@@ -32,6 +34,7 @@ namespace JotunShard.Configuration
         public static IConfigurationBuilder AddAgentPipeline<TFileConfigurationSource>(
             this IConfigurationBuilder configurationBuilder,
             Action<TFileConfigurationSource> provideFileSource,
+            Action<CommandLineConfigurationSource> configureCommandLineSource,
             Func<ExtendableEnvironmentVariablesConfigurationSource> provideEnvironmentSource = null)
             where TFileConfigurationSource : FileConfigurationSource, new()
             => configurationBuilder
@@ -41,6 +44,7 @@ namespace JotunShard.Configuration
 
         public static IConfigurationBuilder AddUtilityPipeline(
             this IConfigurationBuilder configurationBuilder,
+            Action<CommandLineConfigurationSource> configureCommandLineSource,
             Func<ExtendableEnvironmentVariablesConfigurationSource> provideEnvironmentSource = null)
             => configurationBuilder
                 .Add(provideEnvironmentSource?.Invoke() ?? new ExtendableEnvironmentVariablesConfigurationSource())
