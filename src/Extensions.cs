@@ -21,7 +21,7 @@ namespace JotunShard.Configuration
                     cmdSource.Args = Environment.GetCommandLineArgs();
                 });
 
-        public static IConfigurationBuilder AddNetworkPipeline<TServerConfigurationSource, TFileConfigurationSource>(
+        public static IConfigurationBuilder AddNetworkPipeline<TServerConfigurationSource>(
             this IConfigurationBuilder configurationBuilder,
             Action<TServerConfigurationSource> provideServerSource)
             where TServerConfigurationSource : ServerConfigurationSource, new()
@@ -33,7 +33,7 @@ namespace JotunShard.Configuration
                     cmdSource.Args = Environment.GetCommandLineArgs();
                 });
 
-        public static IConfigurationBuilder AddAgentPipeline<TServerConfigurationSource, TFileConfigurationSource>(
+        public static IConfigurationBuilder AddAgentPipeline<TFileConfigurationSource>(
             this IConfigurationBuilder configurationBuilder,
             Action<TFileConfigurationSource> provideFileSource)
             where TFileConfigurationSource : FileConfigurationSource, new()
@@ -45,7 +45,7 @@ namespace JotunShard.Configuration
                     cmdSource.Args = Environment.GetCommandLineArgs();
                 });
 
-        public static IConfigurationBuilder AddUtilityPipeline<TServerConfigurationSource, TFileConfigurationSource>(
+        public static IConfigurationBuilder AddUtilityPipeline(
             this IConfigurationBuilder configurationBuilder)
             => configurationBuilder
                 .AddEnvironmentVariables()
