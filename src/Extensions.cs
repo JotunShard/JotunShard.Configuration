@@ -10,11 +10,11 @@ namespace JotunShard.Configuration
             this IConfigurationBuilder configurationBuilder,//AppDomain
             Action<TServerConfigurationSource> provideServerSource,
             Action<TFileConfigurationSource> provideFileSource,
-            Action<CommandLineConfigurationSource> configureCommandLineSource)
+            Func<ExtendableEnvironmentVariablesConfigurationSource> provideEnvironmentSource = null)
             where TServerConfigurationSource : ServerConfigurationSource, new()
             where TFileConfigurationSource : FileConfigurationSource, new()
             => configurationBuilder
-                .AddEnvironmentVariables()
+                .Add(provideEnvironmentSource?.Invoke() ?? new ExtendableEnvironmentVariablesConfigurationSource())
                 .Add(provideServerSource)
                 .Add(provideFileSource)
                 .Add(configureCommandLineSource);
@@ -22,28 +22,28 @@ namespace JotunShard.Configuration
         public static IConfigurationBuilder AddNetworkPipeline<TServerConfigurationSource>(
             this IConfigurationBuilder configurationBuilder,
             Action<TServerConfigurationSource> provideServerSource,
-            Action<CommandLineConfigurationSource> configureCommandLineSource)
+            Func<ExtendableEnvironmentVariablesConfigurationSource> provideEnvironmentSource = null)
             where TServerConfigurationSource : ServerConfigurationSource, new()
             => configurationBuilder
-                .AddEnvironmentVariables()
+                .Add(provideEnvironmentSource?.Invoke() ?? new ExtendableEnvironmentVariablesConfigurationSource())
                 .Add(provideServerSource)
                 .Add(configureCommandLineSource);
 
         public static IConfigurationBuilder AddAgentPipeline<TFileConfigurationSource>(
             this IConfigurationBuilder configurationBuilder,
             Action<TFileConfigurationSource> provideFileSource,
-            Action<CommandLineConfigurationSource> configureCommandLineSource)
+            Func<ExtendableEnvironmentVariablesConfigurationSource> provideEnvironmentSource = null)
             where TFileConfigurationSource : FileConfigurationSource, new()
             => configurationBuilder
-                .AddEnvironmentVariables()
+                .Add(provideEnvironmentSource?.Invoke() ?? new ExtendableEnvironmentVariablesConfigurationSource())
                 .Add(provideFileSource)
                 .Add(configureCommandLineSource);
 
         public static IConfigurationBuilder AddUtilityPipeline(
             this IConfigurationBuilder configurationBuilder,
-            Action<CommandLineConfigurationSource> configureCommandLineSource)
+            Func<ExtendableEnvironmentVariablesConfigurationSource> provideEnvironmentSource = null)
             => configurationBuilder
-                .AddEnvironmentVariables()
+                .Add(provideEnvironmentSource?.Invoke() ?? new ExtendableEnvironmentVariablesConfigurationSource())
                 .Add(configureCommandLineSource);
 
         public static IConfigurationBuilder Add<TSource>(

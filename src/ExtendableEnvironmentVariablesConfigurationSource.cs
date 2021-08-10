@@ -9,7 +9,9 @@ namespace JotunShard.Configuration
     {
         public string Prefix { get; set; }
 
+        public IEnumerable<IEnvironmentSettingTranslator> Translators { get; set; }
+
         public IConfigurationProvider Build(IConfigurationBuilder builder)
-            => new ExtendableEnvironmentVariablesConfigurationProvider(Prefix);
+            => new ExtendableEnvironmentVariablesConfigurationProvider(Prefix, Translators);
     }
 }
